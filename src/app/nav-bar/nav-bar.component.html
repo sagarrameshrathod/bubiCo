@@ -1,0 +1,20 @@
+<nav class="navBar">
+    <div class="navBar-inner">
+        <div class="navBar-left">
+            <span class="bubiCo">bubi.co</span>
+        </div>
+        <div class="navBar-center" [ngClass]="{'is-open': istoggled}">
+            <ul class="navBar-list">
+                <li class="list">Home</li>
+                <li class="list">About</li>
+                <li class="list">Gallery</li>
+                <li class="list">Adventures</li>
+                <li class="list">Contact</li>
+            </ul>
+        </div>
+        <div class="navBar-right">
+            <img src="../../assets/search.png" alt="search" class="navBar-search">
+            <img src="../../assets/menu-bar.png" alt="menu" class="menu-icon" (click)="nav_menu()">
+        </div>
+    </div>
+</nav>

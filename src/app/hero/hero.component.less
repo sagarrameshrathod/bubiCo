@@ -1,0 +1,231 @@
+@min768: ~"(min-width: 768px)";
+@min1024: ~"(min-width: 1025px)";
+@max767: ~"(max-width: 767px)";
+@max1023: ~"(max-width: 1024px)";
+
+.max-width-height{
+    max-width: 1000px;
+    max-height: 700px;
+}
+
+@center: 0 auto;
+@nunito: Nunito Sans;
+
+.hero{
+    max-width: 1366px;
+    margin: @center;
+}
+
+.hero__inner{
+    width: 90%;
+    margin: @center;
+
+    &__inner{
+        position: relative;
+    }
+}
+
+.hero__container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @media @max1023 {
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .hero__dot{
+        width: 104px;
+        height: 186px;
+        
+        @media @min1024 {
+            margin: 64px 64px 0 0; 
+            z-index: 1;
+        }
+
+        @media @max1023 {
+            position: absolute;
+            top: 85%;
+            left: 80%;
+        }
+
+        @media @max767 {
+            display: none;
+        }
+
+        &-rows{
+            display: flex;
+            column-gap: 16px;
+        }
+    
+        &-cols{
+            width: 4px;
+            height: 4px;
+            background-color: #000;
+            font-weight: bolder;
+            border-radius: 50px;
+            margin-bottom: 10px;
+            border: none;
+        }
+    }
+
+    .hero__home{
+        @media @min1024 {
+            width: 85%;
+        }
+
+        @media @max1023 {
+            max-height: 400px;
+            overflow: hidden;
+        }
+
+        &-image{
+            width: 100%;
+            max-height: 700px;
+
+            @media @max1023 {
+                max-height: 468px;
+            }
+
+            @media @max767 {
+                max-height: 182px;
+            }
+        }
+    }
+}
+
+
+.hero__rest{
+    @media @min768 {
+        position: absolute;
+    }
+
+    @media @min1024 {
+        max-width: 630px;
+        max-height: 400px;
+        background: rgba(255, 255, 255, 0.8);
+        padding-right: 80px;
+        top: 28%;
+        left: 0%;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px){
+        max-width: 410px;
+        max-height: 296px;
+        padding: 0 40px 0 60px;
+        top: 65%;
+        background: rgba(255, 255, 255, 1);
+    }
+
+    &-name{
+        padding: 80px 0 40px;
+        color: var(--heading-color);
+        font-size: 60px;
+        font-family: Lora;
+
+        @media @max1023 {
+            font-size: 42px;
+            padding: 40px 0 20px;
+        }
+
+        @media @max767 {
+            font-size: 32px;
+            padding: 30px 0;
+        }
+    }
+
+    &-para{
+        color: var(--info-color);
+        font-family: @nunito;
+    }
+}
+
+.hero__learn-more{
+    display: flex;
+    align-items: center;
+    padding: 40px 0 67px;
+    gap: 14px;
+
+    @media @max1023 {
+        padding: 20px 0 40px;
+    }
+
+    &-link{
+        color: var(--info-color);
+        font-family: @nunito;
+    }
+
+    &-image{
+        width: 14px;
+        height: 16px;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+}
+
+.hero__social-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 197px;
+    width: 20px;
+
+    @media @min1024 {
+        position: absolute;
+        bottom: 20%;
+        left: 100%;
+        margin-left: 25px;
+    }
+
+    @media @max1023 {
+        display: none;
+    }
+
+    .hero__social{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .hero__social-media-icon{
+            width: 16px;
+            height: 16px;
+            opacity: 0.4;
+            transition: 0.4s all;
+            &:hover{
+                cursor: pointer;
+                opacity: 1;
+            }
+        }
+    }
+
+    .hero__scroll{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+        width: 95px;
+        transform: rotate(-90deg);
+        gap: 10px;
+
+        &-image{
+            width: 16px;
+            height: 14px;
+            transform: rotate(180deg);
+            opacity: 0.6;
+            transition: 0.4s all;
+            &:hover{
+                cursor: pointer;
+                opacity: 1;
+            }
+        }
+
+        &-name{
+            font-size: 12px;
+            opacity: 0.8;
+        }
+    }
+}

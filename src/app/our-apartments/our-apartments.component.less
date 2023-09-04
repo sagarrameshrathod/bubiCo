@@ -1,0 +1,169 @@
+@min768: ~"(min-width: 768px)";
+@min1024: ~"(min-width: 1025px)";
+@max767: ~"(max-width: 767px)";
+@max1023: ~"(max-width: 1024px)";
+
+@font-nunito: Nunito Sans;
+
+.our-apartments{
+    max-width: 1366px;
+    margin: 0 auto 120px;
+
+    @media @max1023 {
+        margin: 0 auto 80px;
+    }
+
+    @media @max767 {
+        margin: 0 auto 40px;
+    }
+}
+
+.our-apartments-inner{
+    width: 90%;
+    margin: 0 auto;
+
+    @media @max1023 {
+        width: 80%;
+    }
+}
+
+.our-apartments-section-one{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @media @max1023 {
+        flex-direction: column;
+        align-items: normal;
+        margin-bottom: 80px;
+    }
+
+    @media @max767 {
+        margin-bottom: 40px;
+    }
+}
+
+.our-apartments-header{
+    @media @min1024 {
+        max-width: 500px;
+    }
+
+    .heading{
+        margin-bottom: 30px;
+        color: var(--heading-color);
+        font-size: 60px;
+        font-family: Lora;
+
+        @media @max1023 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        @media @max767 {
+            font-size: 32px;
+        }
+    }
+
+    .para{
+        color: var(--paragraph-color);
+        font-family: @font-nunito;
+    }
+}
+
+.learn-more{
+    .button-learn-more{
+        width: 200px;
+        height: 60px;
+        background-color: var(--btn-bg-color);
+        color: var(--bg-color);
+        font-size: 18px;
+        font-family: @font-nunito;
+        font-weight: 600;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.4s all;
+        &:hover{
+            color: var(--btn-bg-color);
+            background-color: var(--content-color);
+        }
+    }
+
+    @media @max1023 {
+        margin-top: 40px;
+    }
+}
+
+.our-apartments-section-two{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+
+    .our-apartments-image{
+        max-width: 508px;
+        max-height: 493px;
+
+        @media @max1023 {
+            display: none;
+        }
+    }
+
+    .our-apartments-info{
+        @media @min1024 {
+            max-width: 630px;
+            max-height: 422px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 80px;
+            column-gap: 30px;
+        }
+
+        @media @max1023 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px 10px;
+        }
+
+        @media @max767 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-info{
+            margin-top: 10px;
+            margin-bottom: 14px;
+            font-size: 24px;
+            font-family: @font-nunito;
+            color: var(--heading-color);
+
+            @media @max1023 {
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+        }
+
+        .info-num{
+            font-size: 42px;
+            font-family: @font-nunito;
+            color: var(--heading-color);
+
+            @media @max767 {
+                font-size: 32px;
+            }
+        }
+
+        .info-para{
+            font-size: 16px;
+            font-family: @font-nunito;
+            color: var(--paragraph-color);
+        }
+
+        .info{
+            max-width: 300px;
+            max-height: 171px;
+        }
+    }
+}
